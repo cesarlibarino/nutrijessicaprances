@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jessica Prances | Nutrição Esportiva e Endocrinologia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#2f3f37;
+      --green-soft:#6d7a72;
+      --gold:#c97f5d;
+      --sand:#f3ece7;
+      --cream:#fbf8f5;
+      --white:#ffffff;
+      --text:#232724;
+      --muted:#68716b;
+      --serif:'Cormorant Garamond',serif;
+      --sans:'Montserrat',sans-serif;
+      --shadow:0 28px 70px rgba(47,63,55,.12);
+      --transition:all .35s cubic-bezier(.25,1,.5,1);
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:var(--sans);
+      background:var(--cream);
+      color:var(--text);
+      line-height:1.65;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%;display:block;}
+    a{text-decoration:none;}
+    .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      background:var(--green);
+      color:var(--white);
+      padding:18px 34px;
+      border:1px solid var(--green);
+      border-radius:2px;
+      text-transform:uppercase;
+      letter-spacing:1.7px;
+      font-size:12px;
+      font-weight:700;
+      transition:var(--transition);
+      box-shadow:0 16px 34px rgba(47,63,55,.16);
+    }
+    .btn:hover{background:transparent;color:var(--green);transform:translateY(-3px);box-shadow:0 18px 38px rgba(47,63,55,.10);}
+    .btn svg{fill:currentColor;flex-shrink:0;}
+
+    .tag{
+      display:block;
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:4px;
+      font-size:11px;
+      font-weight:700;
+      margin-bottom:16px;
+    }
+    .title{
+      font-family:var(--serif);
+      color:var(--green);
+      font-size:48px;
+      line-height:1.12;
+      font-weight:300;
+      margin-bottom:20px;
+    }
+    .subtitle{
+      color:var(--muted);
+      font-size:16px;
+      font-weight:300;
+      max-width:680px;
+      margin-bottom:40px;
+    }
+    section{padding:88px 0;position:relative;}
+
+    header{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:10;
+      padding:34px 0;
+    }
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .logo{
+      font-family:var(--serif);
+      color:var(--green);
+      font-size:27px;
+      letter-spacing:1.4px;
+      font-weight:400;
+    }
+    .crn{font-size:12px;color:var(--green-soft);letter-spacing:1px;font-weight:500;}
+
+    .hero{
+      min-height:96vh;
+      display:flex;
+      align-items:center;
+      padding-top:168px;
+      padding-bottom:88px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(201,127,93,.18), transparent 34%),
+        linear-gradient(180deg,#f1e8e0 0%, var(--cream) 100%);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:78px;
+      align-items:center;
+    }
+    .hero h1{
+      font-family:var(--serif);
+      color:var(--green);
+      font-size:64px;
+      line-height:1.08;
+      font-weight:300;
+      margin-bottom:24px;
+    }
+    .hero h1 em{font-style:italic;}
+    .hero p{
+      color:var(--muted);
+      font-size:17px;
+      font-weight:300;
+      max-width:580px;
+      margin-bottom:34px;
+    }
+    .hero-proof{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:42px;
+      padding-top:30px;
+      border-top:1px solid rgba(201,127,93,.30);
+      max-width:640px;
+    }
+    .proof-item strong{
+      display:block;
+      font-family:var(--serif);
+      color:var(--green);
+      font-size:33px;
+      line-height:1;
+      font-weight:400;
+      margin-bottom:8px;
+    }
+    .proof-item span{font-size:12px;color:var(--muted);letter-spacing:.4px;line-height:1.35;display:block;}
+
+    .portrait-wrap{position:relative;display:flex;justify-content:center;}
+    .portrait-frame{
+      width:100%;
+      max-width:430px;
+      aspect-ratio:4/5;
+      border-radius:220px 220px 6px 6px;
+      overflow:hidden;
+      border:9px solid var(--white);
+      box-shadow:var(--shadow);
+      background:var(--sand);
+    }
+    .portrait-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform 6s ease;}
+    .portrait-wrap:hover img{transform:scale(1.05);}
+    .floating-card{
+      position:absolute;
+      left:4%;
+      bottom:36px;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(12px);
+      padding:20px 22px;
+      border-left:3px solid var(--gold);
+      box-shadow:0 20px 45px rgba(47,63,55,.10);
+      max-width:295px;
+    }
+    .floating-card strong{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--green);display:block;line-height:1.1;margin-bottom:6px;}
+    .floating-card span{font-size:12px;color:var(--muted);line-height:1.45;display:block;}
+
+    .pain{background:var(--white);}
+    .center{text-align:center;display:flex;flex-direction:column;align-items:center;}
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:26px;
+    }
+    .card{
+      background:var(--cream);
+      border:1px solid rgba(47,63,55,.05);
+      padding:40px 34px;
+      border-radius:4px;
+      transition:var(--transition);
+    }
+    .card:hover{transform:translateY(-7px);background:var(--white);border-color:rgba(201,127,93,.38);box-shadow:0 26px 52px rgba(47,63,55,.06);}
+    .icon{color:var(--gold);margin-bottom:24px;}
+    .card h3{font-family:var(--serif);font-size:26px;line-height:1.15;color:var(--green);font-weight:400;margin-bottom:14px;}
+    .card p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.65;}
+
+    .method{background:var(--cream);}
+    .split{
+      display:grid;
+      grid-template-columns:.92fr 1.08fr;
+      gap:88px;
+      align-items:center;
+    }
+    .image-box{position:relative;}
+    .image-box img{width:100%;border-radius:4px;box-shadow:var(--shadow);aspect-ratio:4/5;object-fit:cover;object-position:center;}
+    .image-box:after{content:"";position:absolute;inset:28px -28px -28px 28px;border:1px solid var(--gold);z-index:-1;}
+    .steps{display:flex;flex-direction:column;gap:28px;margin-top:4px;}
+    .step{display:flex;gap:24px;}
+    .num{font-family:var(--serif);font-size:35px;line-height:1;color:var(--gold);font-weight:300;min-width:46px;}
+    .step h3{font-family:var(--serif);font-size:25px;color:var(--green);font-weight:400;margin-bottom:8px;line-height:1.15;}
+    .step p{font-size:14px;color:var(--muted);font-weight:300;}
+
+    .about{background:var(--white);}
+    .about .split{grid-template-columns:1.08fr .92fr;}
+    .about-text p{font-size:16px;color:var(--muted);font-weight:300;margin-bottom:22px;}
+    .signature{font-family:var(--serif);font-size:28px;color:var(--green);font-style:italic;margin-top:34px;}
+
+    .cta{
+      background:var(--green);
+      color:var(--white);
+      text-align:center;
+      padding:100px 0;
+    }
+    .cta .title{color:var(--white);font-size:54px;max-width:800px;margin-left:auto;margin-right:auto;}
+    .cta .subtitle{color:rgba(255,255,255,.66);margin-left:auto;margin-right:auto;}
+    .cta .btn{background:var(--gold);border-color:var(--gold);color:var(--green);box-shadow:0 16px 34px rgba(0,0,0,.16);}
+    .cta .btn:hover{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55);}
+    .cta-note{margin-top:22px;color:rgba(255,255,255,.55);font-size:13px;letter-spacing:.4px;}
+
+    footer{background:#202b26;color:rgba(255,255,255,.48);padding:58px 0 34px;font-size:13px;}
+    .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:center;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:34px;margin-bottom:28px;}
+    .footer-logo{font-family:var(--serif);font-size:25px;color:var(--white);display:block;margin-bottom:8px;}
+    .footer-links{display:flex;gap:28px;}
+    .footer-links a{color:rgba(255,255,255,.52);transition:var(--transition);}
+    .footer-links a:hover{color:var(--gold);}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px;}
+    .credit{letter-spacing:1.6px;color:rgba(255,255,255,.62);font-weight:600;}
+
+    @media(max-width:1024px){
+      section{padding:74px 0;}
+      .hero{padding-top:138px;padding-bottom:72px;text-align:center;min-height:auto;}
+      .hero-grid,.split,.about .split{grid-template-columns:1fr;gap:56px;}
+      .hero p,.hero-proof{margin-left:auto;margin-right:auto;}
+      .portrait-wrap{order:-1;}
+      .cards{grid-template-columns:1fr;gap:20px;}
+      .image-box:after{display:none;}
+      .title{font-size:40px;}
+      .hero h1{font-size:50px;}
+      .cta .title{font-size:42px;}
+    }
+
+    @media(max-width:768px){
+      .container{padding:0 20px;}
+      header{padding:24px 0;}
+      .logo{font-size:23px;}
+      .crn{font-size:11px;}
+      section{padding:60px 0;}
+      .hero{padding-top:114px;padding-bottom:56px;}
+      .hero h1{font-size:40px;}
+      .hero p{font-size:15.5px;margin-bottom:28px;}
+      .btn{width:100%;padding:17px 20px;font-size:11px;letter-spacing:1.3px;}
+      .hero-proof{grid-template-columns:1fr;gap:16px;margin-top:34px;padding-top:26px;text-align:left;}
+      .proof-item{display:flex;align-items:center;gap:14px;}
+      .proof-item strong{font-size:28px;margin-bottom:0;min-width:92px;}
+      .portrait-frame{max-width:330px;border-width:7px;}
+      .floating-card{display:none;}
+      .title{font-size:36px;}
+      .subtitle{font-size:15px;margin-bottom:32px;}
+      .card{padding:34px 28px;}
+      .step{gap:18px;}
+      .num{font-size:31px;min-width:40px;}
+      .cta{padding:72px 0;}
+      .cta .title{font-size:36px;}
+      .footer-grid,.footer-bottom{flex-direction:column;text-align:center;}
+      .footer-links{flex-direction:column;gap:16px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="#" class="logo">Jessica Prances</a>
+        <span class="crn">Nutrição Esportiva | Endocrinologia</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="tag">Método #SÓSDesinflame</span>
+          <h1>Transforme seu corpo com estratégia, saúde e <em>resultado sustentável</em>.</h1>
+          <p>Um acompanhamento nutricional individualizado para emagrecimento, saúde intestinal, lipedema e performance, unindo nutrição esportiva e uma visão clínica mais completa.</p>
+          <a class="btn" href="https://api.whatsapp.com/message/OJDZLBFHVKHTK1?autoload=1&app_absent=0">Comece sua transformação</a>
+          <div class="hero-proof">
+            <div class="proof-item"><strong>Online</strong><span>acompanhamento para todo o Brasil</span></div>
+            <div class="proof-item"><strong>BH</strong><span>atendimento presencial em Belo Horizonte</span></div>
+            <div class="proof-item"><strong>Endócrino</strong><span>visão integrada para metabolismo, intestino e saúde</span></div>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <div class="portrait-frame">
+            <img src="expert.jpg" alt="Nutricionista Jessica Prances">
+          </div>
+          <div class="floating-card">
+            <strong>Jessica Prances</strong>
+            <span>Nutrição esportiva, endocrinologia, emagrecimento, intestino e lipedema.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="container">
+      <div class="center">
+        <span class="tag">Emagrecimento e Saúde</span>
+        <h2 class="title">Desinflamar é mais do que perder peso</h2>
+        <p class="subtitle">Quando intestino, inflamação, rotina e metabolismo não são considerados, o emagrecimento vira um ciclo de tentativa, frustração e retorno ao ponto inicial.</p>
+      </div>
+      <div class="cards">
+        <div class="card"><h3>Metabolismo travado</h3><p>Dietas genéricas não avaliam sono, rotina, exames, hormônios, intestino e fatores que podem estar dificultando sua evolução.</p></div>
+        <div class="card"><h3>Inflamação e lipedema</h3><p>O cuidado com lipedema e desinflamação precisa de estratégia nutricional, constância e escolhas que façam sentido para o seu corpo.</p></div>
+        <div class="card"><h3>Resultados que não sustentam</h3><p>O objetivo é emagrecer e transformar a rotina com mais consciência, não viver presa a restrições extremas que não duram.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="method">
+    <div class="container">
+      <div class="split">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80" alt="Planejamento nutricional saudável">
+        </div>
+        <div>
+          <span class="tag">Método Individualizado</span>
+          <h2 class="title">Nutrição para desinflamar, emagrecer e evoluir</h2>
+          <p class="subtitle">A consulta organiza sua alimentação com estratégia, considerando sua rotina, sintomas, exames, objetivos estéticos e necessidades metabólicas.</p>
+          <div class="steps">
+            <div class="step"><div class="num">01</div><div><h3>Avaliação completa</h3><p>Análise da rotina, alimentação, sintomas, histórico, exames e dos fatores que podem estar dificultando emagrecimento e saúde intestinal.</p></div></div>
+            <div class="step"><div class="num">02</div><div><h3>Plano alimentar estratégico</h3><p>Conduta personalizada para desinflamar, melhorar intestino, favorecer emagrecimento, performance e adesão no dia a dia.</p></div></div>
+            <div class="step"><div class="num">03</div><div><h3>Ajustes e acompanhamento</h3><p>O plano evolui com a sua resposta, garantindo mais clareza, consistência e direcionamento em cada etapa da transformação.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <div class="split">
+        <div class="about-text">
+          <span class="tag">A Profissional</span>
+          <h2 class="title">Jessica Prances</h2>
+          <p>Nutricionista com atuação em nutrição esportiva e endocrinologia, com foco em emagrecimento, intestino, lipedema e transformação corporal.</p>
+          <p>Meu trabalho une estratégia clínica, educação alimentar e acompanhamento individualizado para que a paciente entenda o próprio corpo e tenha mais controle sobre sua evolução.</p>
+          <p>A proposta é sair das dietas genéricas e construir um caminho possível, com saúde, constância e resultado estético sustentável.</p>
+          <div class="signature">Jessica Prances — Nutrição Esportiva | Endocrinologia</div>
+        </div>
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Alimentação saudável e performance">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="consulta">
+    <div class="container">
+      <span class="tag">Agendamento</span>
+      <h2 class="title">Comece sua transformação com direção</h2>
+      <p class="subtitle">Clique no botão abaixo e fale pelo WhatsApp para receber mais informações sobre a consulta e entender qual o melhor caminho para o seu objetivo.</p>
+      <a class="btn" href="https://api.whatsapp.com/message/OJDZLBFHVKHTK1?autoload=1&app_absent=0">Quero começar agora</a>
+      <div class="cta-note">Atendimento online e presencial • Emagrecimento • Intestino • Lipedema • Nutrição esportiva</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#inicio" class="footer-logo">Jessica Prances</a>
+          <p>Nutrição esportiva e endocrinologia para emagrecimento, saúde intestinal, lipedema e transformação corporal.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#inicio">Início</a>
+          <a href="#consulta">Consulta</a>
+          <a href="https://api.whatsapp.com/message/OJDZLBFHVKHTK1?autoload=1&app_absent=0">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jessica Prances. Todos os direitos reservados.</p>
+        <p class="credit">Feito por DORYAN</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Nome da imagem da expert: expert.jpg | Coloque esse arquivo na mesma pasta do index.html -->
+</body>
+</html>
